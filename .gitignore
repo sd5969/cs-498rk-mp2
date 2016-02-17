@@ -4,5 +4,6 @@
 node_modules/
 npm-debug.log
 public/css/
+public/lib/
 public/js/
 public/bower_lib/
