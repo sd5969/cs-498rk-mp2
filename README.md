@@ -3,6 +3,13 @@
 ## Setup
 Use the following commands in your vagrant development environment to get this up and running
 ```bash
+git clone --bare https://github.com/uiuc-web-programming/mp2_starter.git
+cd mp2_starter.git
+git push --mirror https://github.com/your-github-username/mp2.git
+# Mirror-push to your mp2 repository. Use your github username in the URL. Change the URL if you're using bitbucket.
+cd ..
+rm -rf mp2_starter.git
+
 git clone https://github.com/uiuc-web-programming/mp2_starter.git
 cd mp2_starter
 npm install
