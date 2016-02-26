@@ -1,1 +1,7 @@
 // Add any custom Sass & CSS here
+
+body{
+	@include breakpoint(medium down){
+		background: red !important;
+	}
+}
