@@ -1,47 +1,209 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>MP2 Starter</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" href="./media/pics/favicon.ico" />
+		<title>Welcome to ROW Foundation!</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="./css/styles.css">
+		<link rel="stylesheet" href="./lib/stickyNavbar.js/animate.min.css">
+		<link rel="stylesheet" href="./lib/slick-carousel/slick/slick.css">
+	</head>
 
-<body>
-  <nav class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">MP2</li>
-        <li><a href="https://courses.engr.illinois.edu/cs498rk1/">Web Page</a></li>
-      </ul>
-    </div>
-  </nav>
-	<div class="row text-center">
-		<h3>Hello. It's Me.</h3>
-	</div>
-	<section class="row">
-		<div class="alert columns small-12 large-6">
-			<div class="text-center"><img src="http://lorempixel.com/400/200/cats"/></div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit velit temporibus, fugit recusandae aliquid officiis molestias possimus reprehenderit quos. Facere dolores, nulla optio recusandae. Voluptatibus aut esse nulla saepe sit ut amet, neque officia officiis quam ea ex adipisci, quaerat, eligendi veniam iste temporibus. Aperiam ea quos fugiat provident, voluptatum reiciendis mollitia voluptates, odio quam at, deserunt animi voluptas odit aliquid saepe voluptate distinctio excepturi. Deserunt, id esse fuga cum accusantium eos obcaecati odit veritatis molestias illum sequi repellat, quisquam quasi architecto velit blanditiis perferendis, nulla eligendi non laboriosam. Eligendi sint, voluptatem ipsam dolore eum temporibus dicta, quaerat ea molestias placeat, asperiores minima sit explicabo! Repellat qui ducimus ipsum. Dignissimos at, aliquid vitae asperiores omnis provident voluptatibus, itaque delectus. Porro corrupti vel culpa, delectus in doloremque nam ratione aliquid ullam non iusto magnam, repudiandae, magni a quasi voluptatum inventore exercitationem quibusdam sint autem totam ex quia possimus. Similique ad fugiat eligendi magnam ab, ex nulla unde eos, tempora quis consequatur maxime inventore perferendis voluptatem non nam dignissimos voluptatum dolor quasi quidem molestias maiores doloribus. Omnis ipsa fugit amet! Eum repellat deleniti fuga omnis in maiores rem iusto, qui quasi ipsum illum odit laudantium molestiae, nostrum ipsam fugit animi atque! Non.
-      </p>
-    </div>
-		<div class="columns small-12 large-6">
-	  	<div class="text-center"><img src="http://lorempixel.com/400/200/nature"/></div>
-	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nobis facere sint placeat necessitatibus reprehenderit amet quas minima beatae illo nemo labore, maxime adipisci, accusamus voluptates repudiandae quia, ut excepturi ea quis obcaecati molestias error architecto unde? Hic vel facere porro magnam ipsam omnis eos ducimus, architecto velit beatae modi natus sunt suscipit quo optio qui repellat, blanditiis consequuntur. Fuga omnis porro quis inventore in voluptatum veritatis illum beatae rem. Labore nam saepe cupiditate quod, itaque quidem libero, quas tempore incidunt, quos earum repudiandae recusandae quia voluptas ducimus inventore, expedita. Alias minima, commodi aut, aspernatur laborum quae mollitia pariatur suscipit ad accusamus a ipsam fuga necessitatibus voluptas esse error reprehenderit provident. Sequi architecto ipsum qui enim labore sunt incidunt ullam pariatur. Minus porro error ipsa perferendis exercitationem debitis dicta asperiores nostrum cum voluptas qui dolores odit numquam incidunt cumque eos nemo architecto repudiandae adipisci, eius ut, aut suscipit minima perspiciatis consectetur. Ratione quisquam neque voluptatem? Qui, aspernatur iste quaerat iure. Debitis nobis minus animi mollitia libero temporibus perferendis ratione, inventore ullam, eos ut porro, velit quibusdam rerum possimus, ex! Quidem consectetur obcaecati ad veritatis. Velit illum aliquid tenetur, nisi illo quaerat labore nemo id sequi eveniet consequuntur. Voluptate, similique, rem!
-      </p>
-    </div>
-  </section>
+	<body>
 
-  <!-- Scripts -->
-  
-  <script src="./lib/jquery-2.1.3.min/index.js"></script>
-  <script src="./foundation6_lib/js/foundation.min.js"></script>
-  <script src="./js/script.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-  <script src="http://localhost:35729/livereload.js"></script>
-</body>
+		<div class="sticky-full display-font" id="navBar">
+
+			<div class="title-bar sticky-hamburger" data-responsive-toggle="mainNav" data-hide-for="large">
+				<button class="menu-icon" type="button" data-toggle></button>
+				<h3 class="title-bar-title">ROW Foundation</h3>
+			</div>
+
+			<nav class="title-bar sticky-nav" id="mainNav">
+				<h3 class="title-bar-left show-for-large">Rivers of the World Foundation</h3>
+				<ul class="align-left menu title-bar-right vertical large-horizontal">
+					<li><a href="#about">About</a></li>
+					<li><a href="#news">News</a></li>
+					<li><a href="#projects">Pictures</a></li>
+					<li><a href="#impact">Stories</a></li>
+					<li><a href="#sponsor">Sponsor</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<header class="scrollto">
+			<div class="content">
+				<img class="show-for-medium" src="./data/pics/rowlogo.png" alt="row foundation logo" />
+				<div class="highlight">
+					<p class="bigger">Greetings from Rivers of the World:</p>
+					<p>A foundation dedicated to restoring and protecting rivers and streams of the world!</p>
+				</div>
+			</div>
+		</header>
+		
+		<main>
+			<section class="scrollto" id="about">
+				<div class="row" data-equalizer data-equalize-on="medium">
+					<div class="large-pad column small-12 medium-6 text-center" data-equalizer-watch>
+						<span class="fa fa-star fa-3x above-title"></span>
+						<h2>About</h2>
+						<p>
+							We are working on controlling Environmental Pollution and preserving the natural environment is our prime objective. We started our River cleanup and restoration effort with the Yamuna River near New Delhi and Agra, India.
+						</p>
+						<p>
+							We'd love to have your support in this effort. The "Yamuna River Remediation Project," in New Delhi, India, was started single-handedly back in October 1992. Since then we have gained support from various organizations and individuals and have now formed a group of dedicated individuals with one goal, one mind, and one motto of one kind - the "Blue Yamuna".
+						</p>
+					</div>
+					<div class="large-pad column small-12 medium-6 text-center" data-equalizer-watch>
+						<span class="fa fa-shield fa-3x above-title"></span>
+						<h2>Mission Statement</h2>
+						<p>
+							The primary objective of the Rivers of the World (ROW) Foundation is to make all efforts to cleanup highly polluted Rivers in US, India, SE Asia, S. America, Africa, Europe, and Other Parts of the World.
+						</p>
+						<p>
+							Some of our major tenets:
+							<ol>
+								<li>
+									Inform and involve the public in activities that foster the protection, enhancement, and establishment of clean rivers and sustainable development along the river banks and riparian areas.
+								</li>
+								<li>
+									Identify, evaluate, and address threats to the biological, cultural, and economic components of conservation of the river and riparian areas.
+								</li>
+								<li>
+									Encourage voluntary participation of all potential partners to enhance and restore the biological, economic, and cultural well being of the rivers and riparian areas through educational, technical, and financial involvement.
+								</li>
+							</ol>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-pad column small-12 text-center video">
+						<div class="overflow-wrapper">
+							<video id="yamuna" autoplay="true" loop="true">
+								<source src="./data/videos/yamuna.mp4" type="video/mp4" />
+								Your browser doesn't support video! :(
+							</video>
+							<h4>Trash in the Yamuna River near Delhi, India.</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="news" class="scrollto">
+				<div class="news only-large-pad text-center">
+					<span class="fa fa-newspaper-o fa-3x above-h1"></span>
+					<h2>News</h2>
+					<div class="row" data-equalizer data-equalize-on="medium">
+						<div class="column small-12 medium-6" data-equalizer-watch>
+							<div class="news-date">February 29th, 2016</div>
+							<div class="news-desc">We are happy to announce our new website!</div>
+						</div>
+						<div class="column small-12 medium-6" data-equalizer-watch>
+							<div class="news-date">February 26th, 2016</div>
+							<div class="news-desc">We are working on a new website.</div>
+						</div>
+					</div>
+					<div class="row" data-equalizer data-equalize-on="medium">
+						<div class="column small-12 medium-6" data-equalizer-watch>
+							<div class="news-date">February 1st, 2016</div>
+							<div class="news-desc">The river summit in Odisha, India was a success.</div>
+						</div>
+						<div class="column small-12 medium-6" data-equalizer-watch>
+							<div class="news-date">January 16th, 2016</div>
+							<div class="news-desc">We will soon be providing a link to sign up for the river summit.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="projects" class="scrollto">
+				<div id="carousel">
+					<div><img src="./data/pics/carousel/pic1.jpg" alt=""></div>
+					<div><img src="./data/pics/carousel/pic2.jpg" alt=""></div>
+					<div><img src="./data/pics/carousel/pic3.jpg" alt=""></div>
+					<div><img src="./data/pics/carousel/pic4.jpg" alt=""></div>
+					<div><img src="./data/pics/carousel/pic5.jpg" alt=""></div>
+				</div>
+			</section> <!--
+			<section id="impact">
+				<span class="fa fa-lightbulb-o fa-3x above-h1"></span>
+				<h1>Stories</h1>
+				<div class="modal_link" id="link_modal_1">
+					<img src="./media/india.png" alt="indian flag" />
+					<h2>Yamuna River</h2>
+					<p>Click to learn more about the Yamuna River!</p>
+				</div>
+				<div class="modal_link" id="link_modal_2">
+					<h2>Another River</h2>
+					<p>Coming soon!</p>
+				</div>
+				<div class="modal_link" id="link_modal_3">
+					<h2>And Another River</h2>
+					<p>Coming soon!</p>
+				</div>
+				<div class="modal_link" id="link_modal_4">
+					<h2>Fourth River</h2>
+					<p>Coming soon!</p>
+				</div>
+				<div class="modal_link" id="link_modal_5">
+					<h2>That Other River</h2>
+					<p>Coming soon!</p>
+				</div>
+				<div class="modal_link" id="link_modal_6">
+					<h2>Le River</h2>
+					<p>Coming soon!</p>
+				</div>
+				<div class="modal_link" id="link_modal_7">
+					<h2>Yet Another River</h2>
+					<p>Coming soon!</p>
+				</div>
+				<div class="modal_link" id="link_modal_8">
+					<h2>Eighth River</h2>
+					<p>Coming soon!</p>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<section id="sponsor">
+				<span class="fa fa-diamond fa-3x above-h1"></span>
+				<h1>Sponsorship</h1>
+				<p>
+					Would you like to get involved with ROW Foundation? Contact us at <span id="ROWemail"></span> or show your support by giving a donation today!
+				</p>
+				<p>
+					We can put a contact form in here in the future. This div is really tall to demonstrate the navbar highlight functionality.
+				</p>
+				<form class="pad-top" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<input type="hidden" name="cmd" value="_s-xclick" />
+					<input type="hidden" name="hosted_button_id" value="UNT4LKFXMU382" />
+					<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+				</form>
+			</section> -->
+		</main>
+		<!--
+		<footer>
+			<div class="social">
+				<ul>
+					<li><a class="circle fa fa-2x fa-facebook" target="_blank" href="https://www.facebook.com/Rivers-of-the-World-Foundation-206701456016572/"></a></li>
+					<li><a class="circle fa fa-2x fa-twitter" target="_blank" href="https://twitter.com/rowfoundation"></a></li>
+					<li><a class="circle fa fa-2x fa-youtube" target="_blank" href="https://www.youtube.com/channel/UC53qtSXGj7N-9_xz6WXxDXw"></a></li>
+				</ul>
+			</div>
+			<div class="copy">
+				<p>Copyright ROW Foundation &copy; 2016</p>
+			</div>
+		</footer>
+		-->
+
+		<!-- Scripts -->
+	  
+		<script src="./lib/jquery-2.1.3.min/index.js"></script>
+		<script src="./foundation6_lib/js/foundation.min.js"></script>
+		<script src="./foundation6_lib/js/foundation/foundation.util.mediaQuery.js"></script>
+		<script src="./lib/stickyNavbar.js/jquery.easing.min.js"></script>
+		<script src="./lib/stickyNavbar.js/jquery.stickyNavbar.min.js"></script>
+		<script src="./lib/slick-carousel/slick/slick.min.js"></script>
+		<script src="./js/script.js"></script>
+		<script src="http://localhost:35729/livereload.js"></script>
+	</body>
 </html>

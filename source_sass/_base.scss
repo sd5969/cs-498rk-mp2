@@ -1,7 +1,180 @@
-// Add any custom Sass & CSS here
-
 body{
-	@include breakpoint(medium down){
+	/* @include breakpoint(medium down){
 		background: red !important;
+	} */
+}
+
+.display-font {
+	font-family: 'Oswald', sans-serif;
+}
+
+.bigger {
+	font-size: 1.2em;
+}
+
+.smaller {
+	font-size: 0.8em;
+}
+
+.sticky-full {
+	z-index: 1000;
+	width: 100%;
+}
+
+.sticky-hamburger {
+	
+	background-color: transparentize(darken($secondary-color, 20%), 0.1);
+
+	h3 {
+		padding-top: 5px;
 	}
+}
+
+.sticky-nav {
+	@include breakpoint(medium up){
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 16px;
+		font-size: 1.5em;
+	}
+
+	a {
+		color: $white;
+		transition: $transition-time;
+	}
+
+	a:hover {
+		color: $primary-color;
+		transition: $transition-time;
+	}
+
+	a.active {
+		background-color: $secondary-color;
+		color: $primary-color;
+	}
+}
+
+header {
+	@include container(0px, 0px);
+	@include breakpoint(medium up) {
+		height: 600px;	
+	}
+	height: 300px;
+	background: url('../data/pics/taj-mahal-sukeindia.jpg') no-repeat right top fixed;
+	background-size: cover;
+
+	.content {
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@include breakpoint(large up) {
+			max-width: 600px;
+		}
+	}
+
+	.highlight {
+		background-color: transparentize($black, .5);
+		color: $white;
+		padding: 10px;
+
+		@include breakpoint(large up) {
+			border-radius: $default-radius;
+			font-size: 1.5em;
+		}
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.above-title {
+	padding-bottom: 10px;
+}
+
+h2 {
+	padding-bottom: 20px;
+}
+
+.column {
+	padding: 0;
+}
+
+.large-pad {
+	padding: 40px;
+	@include breakpoint(medium up) {
+		padding: 80px;
+	}
+}
+
+.only-large-pad {
+	padding-top: 40px;
+	@include breakpoint(medium up) {
+		padding: 80px;
+	}
+}
+
+#about .column:nth-child(1), #about .columns:nth-child(1) {
+	background-color: lighten($primary-color, 10%);
+}
+
+#about .column:nth-child(2), #about .columns:nth-child(2) {
+	background-color: lighten($secondary-color, 50%);
+}
+
+#about .row .video {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	background-color: $black;
+	color: $white;
+}
+
+video {
+	width: 100%;
+}
+
+.news {
+	.row {
+		.news-date {
+			background-color: darken($white, 10%);
+			font-size: 0.8em;
+			padding: 3px;
+		}
+		.news-desc {
+			background-color: lighten($primary-color, 5%);
+			padding: 3px 3px 10px 3px;
+		}
+		.column:nth-child(even) {
+			.news-date {
+				background-color: darken($white, 5%);
+			}
+			.news-desc {
+				background-color: lighten($primary-color, 10%);
+			}
+		}
+	}
+
+	.row:nth-child(even) {
+		.column:nth-child(odd) {
+			.news-date {
+				background-color: darken($white, 5%);
+			}
+			.news-desc {
+				background-color: lighten($primary-color, 10%);
+			}
+		}
+		.column:nth-child(even) {
+			.news-date {
+				background-color: darken($white, 10%);
+			}
+			.news-desc {
+				background-color: lighten($primary-color, 5%);
+			}
+		}
+	}
+		
 }
