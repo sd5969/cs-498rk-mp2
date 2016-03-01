@@ -3,13 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<link rel="shortcut icon" href="./media/pics/favicon.ico" />
+		<link rel="shortcut icon" href="./data/pics/favicon.ico" />
 		<title>Welcome to ROW Foundation!</title>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="./css/styles.css">
 		<link rel="stylesheet" href="./lib/stickyNavbar.js/animate.min.css">
 		<link rel="stylesheet" href="./lib/slick-carousel/slick/slick.css">
+		<link rel="stylesheet" href="./lib/remodal/dist/remodal.css">
+		<link rel="stylesheet" href="./lib/remodal/dist/remodal-default-theme.css">
 	</head>
 
 	<body>
@@ -43,7 +45,7 @@
 			</div>
 		</header>
 		
-		<main>
+		<main class="remodal-bg">
 			<section class="scrollto" id="about">
 				<div class="row" data-equalizer data-equalize-on="medium">
 					<div class="large-pad column small-12 medium-6 text-center" data-equalizer-watch>
@@ -70,9 +72,6 @@
 								</li>
 								<li>
 									Identify, evaluate, and address threats to the biological, cultural, and economic components of conservation of the river and riparian areas.
-								</li>
-								<li>
-									Encourage voluntary participation of all potential partners to enhance and restore the biological, economic, and cultural well being of the rivers and riparian areas through educational, technical, and financial involvement.
 								</li>
 							</ol>
 						</p>
@@ -132,7 +131,7 @@
 				<span class="fa fa-lightbulb-o fa-3x above-h1"></span>
 				<h2>Stories</h2>
 				<div class="row">
-					<div class="column small-6 large-3 modal_link" data-open="modal_1">
+					<div class="column small-6 large-3 modal_link" data-remodal-target="modal_1">
 						<div class="image-wrapper overlay-fade-in">
 							<img src="./data/pics/rivers/yamuna.jpg" alt="yamuna river" />
 							<div class="image-overlay-content">
@@ -141,7 +140,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column small-6 large-3 modal_link" data-open="modal_2">
+					<div class="column small-6 large-3 modal_link" data-remodal-target="modal_2">
 						<div class="image-wrapper overlay-fade-in">
 							<img src="./data/pics/rivers/salmon.jpg" alt="salmon river" />
 							<div class="image-overlay-content">
@@ -150,7 +149,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column small-6 large-3 modal_link" data-open="modal_3">
+					<div class="column small-6 large-3 modal_link" data-remodal-target="modal_3">
 						<div class="image-wrapper overlay-fade-in">
 							<img src="./data/pics/rivers/chattooga.jpg" alt="chattooga river" />
 							<div class="image-overlay-content">
@@ -159,7 +158,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column small-6 large-3 modal_link" data-open="modal_4">
+					<div class="column small-6 large-3 modal_link" data-remodal-target="modal_4">
 						<div class="image-wrapper overlay-fade-in">
 							<img src="./data/pics/rivers/merced.jpg" alt="merced river" />
 							<div class="image-overlay-content">
@@ -170,7 +169,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="column small-6 large-3 modal_link" data-open="modal_5">
+					<div class="column small-6 large-3 modal_link" data-remodal-target="modal_5">
 						<div class="image-wrapper overlay-fade-in">
 							<img src="./data/pics/rivers/owyhee.jpg" alt="owyhee river" />
 							<div class="image-overlay-content">
@@ -179,7 +178,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column small-6 large-3 modal_link" data-open="modal_6">
+					<div class="column small-6 large-3 modal_link" data-remodal-target="modal_6">
 						<div class="image-wrapper overlay-fade-in">
 							<img src="./data/pics/rivers/snake.jpg" alt="snake river" />
 							<div class="image-overlay-content">
@@ -188,7 +187,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column small-6 large-3 end modal_link" data-open="modal_7">
+					<div class="column small-6 large-3 end modal_link" data-remodal-target="modal_7">
 						<div class="image-wrapper overlay-fade-in">
 							<img src="./data/pics/rivers/tinayguk.jpg" alt="tinayguk river" />
 							<div class="image-overlay-content">
@@ -267,60 +266,46 @@
 			</div>
 		</footer>
 
-		<div class="reveal modal" id="modal_1" data-reveal>
+		<div class="remodal modal" data-remodal-id="modal_1">
 			<h1>Yamuna River</h1>
 			<img src="./data/pics/rivers/yamuna.jpg" />
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<button data-remodal-action="close" class="remodal-close"></button>
 		</div>
 
-		<div class="reveal modal" id="modal_2" data-reveal>
+		<div class="remodal modal" data-remodal-id="modal_2">
 			<h1>Salmon River</h1>
 			<img src="./data/pics/rivers/salmon.jpg" />
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<button data-remodal-action="close" class="remodal-close"></button>
 		</div>
 
-		<div class="reveal modal" id="modal_3" data-reveal>
+		<div class="remodal modal" data-remodal-id="modal_3">
 			<h1>Chattooga River</h1>
 			<img src="./data/pics/rivers/chattooga.jpg" />
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<button data-remodal-action="close" class="remodal-close"></button>
 		</div>
 
-		<div class="reveal modal" id="modal_4" data-reveal>
+		<div class="remodal modal" data-remodal-id="modal_4">
 			<h1>Merced River</h1>
 			<img src="./data/pics/rivers/merced.jpg" />
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<button data-remodal-action="close" class="remodal-close"></button>
 		</div>
 
-		<div class="reveal modal" id="modal_5" data-reveal>
+		<div class="remodal modal" data-remodal-id="modal_5">
 			<h1>Owyhee River</h1>
 			<img src="./data/pics/rivers/owyhee.jpg" />
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<button data-remodal-action="close" class="remodal-close"></button>
 		</div>
 
-		<div class="reveal modal" id="modal_6" data-reveal>
+		<div class="remodal modal" data-remodal-id="modal_6">
 			<h1>Snake River</h1>
 			<img src="./data/pics/rivers/snake.jpg" />
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<button data-remodal-action="close" class="remodal-close"></button>
 		</div>
 
-		<div class="reveal modal" id="modal_7" data-reveal>
+		<div class="remodal modal" data-remodal-id="modal_7">
 			<h1>Tinayguk River</h1>
 			<img src="./data/pics/rivers/tinayguk.jpg" />
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<button data-remodal-action="close" class="remodal-close"></button>
 		</div>
 
 		<!-- Scripts -->
@@ -331,6 +316,8 @@
 		<script src="./lib/stickyNavbar.js/jquery.easing.min.js"></script>
 		<script src="./lib/stickyNavbar.js/jquery.stickyNavbar.min.js"></script>
 		<script src="./lib/slick-carousel/slick/slick.min.js"></script>
+		<script src="./lib/remodal/dist/remodal.min.js"></script>
+
 		<script src="./js/script.js"></script>
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>

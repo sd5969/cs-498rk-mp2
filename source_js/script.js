@@ -2,6 +2,15 @@ $(document).foundation();
 
 $(function() {
 
+	// code snippet from http://stackoverflow.com/questions/986937/how-can-i-get-the-browsers-scrollbar-sizes
+
+	function getScrollBarWidth () {
+		var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'}).appendTo('body'),
+			widthWithScroll = $('<div>').css({width: '100%'}).appendTo($outer).outerWidth();
+		$outer.remove();
+		return 100 - widthWithScroll;
+	};
+
 	// sticky navbar
 
 	$('.sticky-full').stickyNavbar({
@@ -39,6 +48,21 @@ $(function() {
 		} else {
 			$('.sticky-full').removeClass('shrink');
 		}
+	});
+
+	// stop weird resizing on modal open
+
+	$(document).on('opening', '.remodal', function () {
+		var scrollWidth = getScrollBarWidth();
+		if(scrollWidth > 0) {
+			$('html').css('margin-right', scrollWidth + 'px');
+			$('nav').css('margin-right', scrollWidth + 'px');
+		}
+	});
+
+	$(document).on('closed', '.remodal', function () {
+		$('html').css('margin-right','0px');
+		$('nav').css('margin-right','0px');
 	});
 
 });
