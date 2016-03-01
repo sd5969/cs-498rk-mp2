@@ -16,21 +16,42 @@ body{
 	font-size: 0.8em;
 }
 
+.shrink {
+	transition: $transition-time;
+
+	h3 {
+		transition: $transition-time;
+		font-size: 15px;
+		padding-top: 9px;
+		@include breakpoint(large up) {
+			padding-top: 5px;
+			font-size: 25px;
+		}
+	}
+
+	nav {
+		padding-top: 0.5rem;
+	}
+}
+
 .sticky-full {
 	z-index: 1000;
 	width: 100%;
 }
 
 .sticky-hamburger {
-	
 	background-color: transparentize(darken($secondary-color, 20%), 0.1);
+	transition: $transition-time;
 
 	h3 {
 		padding-top: 5px;
+		transition: $transition-time;
 	}
 }
 
 .sticky-nav {
+	transition: $transition-time;
+
 	@include breakpoint(medium up){
 		padding-left: 40px;
 		padding-right: 40px;
@@ -45,12 +66,15 @@ body{
 
 	a:hover {
 		color: $primary-color;
-		transition: $transition-time;
 	}
 
 	a.active {
 		background-color: $secondary-color;
 		color: $primary-color;
+	}
+
+	h3  {
+		transition: $transition-time;
 	}
 }
 
@@ -177,4 +201,229 @@ video {
 		}
 	}
 		
+}
+
+#projects {
+	position: relative;
+
+	a {
+		color: $black;
+		text-decoration: none;
+	}
+
+	#carouselTitle {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		text-align: center;
+
+		h2 {
+			margin-top: 35px;
+			color: $secondary-color;
+			@include stroke(lighten($primary-color, 20%));
+		}
+	}
+
+	#prev {
+		position: absolute;
+		cursor: pointer;
+		border-radius: $default-radius;
+		background-color: transparentize(darken($white, 10%), 0.1);
+		padding-top: 4px;
+		padding-right: 1px;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		left: 10px;
+		bottom: 10px;
+	}
+
+	#prev:hover {
+		background-color: $white;
+	}
+
+	#next {
+		@extend #prev;
+		padding-right: 0px;
+		padding-left: 1px;
+		left: 60px;
+	}
+
+	#next:hover {
+		background-color: $white;
+	}
+}
+
+#impact {
+	@include container(0px,0px);
+	padding-top: 40px;
+	background-color: lighten($secondary-color, 50%);
+
+	.image-wrapper {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
+
+	.image-overlay-content {
+		color: $white;
+		cursor: pointer;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		overflow: hidden;
+		padding: 10px;
+		top: 0;
+		left: 0;
+	}
+
+	.overlay-fade-in {
+		.image-overlay-content {
+			opacity: 0;
+			background-color: transparentize($black, 0.4);
+			transition: all $transition-time ease-in-out;
+		}
+		&:hover .image-overlay-content {
+			opacity: 1;
+		}
+	} 
+}
+
+#sponsor {
+	.content {
+		@include container(40px, 40px);
+		@include breakpoint(medium up) {
+			padding: 80px;
+		}
+		background-color: lighten($primary-color, 10%);
+	}
+
+	a {
+		color: $secondary-color;
+	}
+
+	a:hover {
+		color: darken($secondary-color, 15%);
+	}
+
+	.contact {
+		text-align: left;
+		background-color: $white;
+		position: relative;
+		padding: 20px;
+
+		.row {
+			margin: 0;
+		}
+
+		.column:not(:first-child) {
+			padding-left: 10px;
+		}
+
+		.column:not(:last-child) {
+			padding-right: 10px;
+		}
+
+		form {
+			@include breakpoint(medium up) {
+				@include fullCenter();
+			}
+		}
+	}
+
+	.or {
+		text-align: center;
+		background-color: darken($primary-color, 5%);
+		position: relative;
+		padding: 10px;
+
+		p {
+			@include breakpoint(medium up) {
+				@include fullCenter();
+				margin: 0;
+			}
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+	}
+
+	.donate {
+		text-align: center;
+		background-color: lighten($secondary-color, 50%);
+		position: relative;
+		padding: 10px;
+
+		form {
+			@include breakpoint(medium up) {
+				@include fullCenter();
+			}
+		}
+	}
+}
+
+footer {
+	text-align: center;
+
+	li {
+		margin-right: 30px;
+		text-align: center;
+	}
+
+	li:last-child {
+		margin-right: 0px;
+	}
+
+	a {
+		padding-top: 7px;
+		border-radius: 50%;
+		box-sizing: border-box;
+		color: $white;
+		width: 50px;
+		height: 50px;
+		border: 2px solid $white;
+		vertical-align: middle;
+		transition: $transition-time;
+	}
+
+	a:hover {
+		border: 2px solid $primary-color;
+		color: $primary-color;
+		transition: $transition-time;
+	}
+
+	.social {
+		background-color: darken($secondary-color, 15%);
+		padding: 20px 0px;
+
+		ul {
+			margin-bottom: 0;
+		}
+
+		li {
+			color: #fff;
+			display: inline-block;
+		}
+	}
+
+	.copy {
+		background-color: darken($secondary-color, 25%);
+		color: $white;
+		padding: 20px 0px;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.modal {
+	text-align: center;
+	transition: $transition-time;
+
+	img {
+		width: 75%;
+	}
 }
